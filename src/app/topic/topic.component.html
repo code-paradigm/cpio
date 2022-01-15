@@ -1,0 +1,29 @@
+<ng-container *ngFor="let article of topics; let i = index">
+  <ng-container *ngIf="article.route.includes('articles')">
+    <mat-card [id]="i" class="hs-card card" 
+    [routerLink]="article.route"
+    [ngClass]="{'mat-elevation-z4': hover[i]}"
+    (mouseover)="changeStyle(i)" (mouseout)="changeStyle(i)">
+    
+      <div class="card-heading">
+        <img mat-card-image [src]=" article.photo ||'../../assets/image1.jpg'" alt="coding image">
+        <span class="mat-title">{{ article.title }}</span>
+        <span class="mat-body-1">{{ article.description }}</span>
+      </div>
+
+      <div class="author-section">
+        <img mat-card-avatar [src]="article.authorImage" alt="author">
+        <div>
+          <span>{{ article.author }}</span>
+          <br>
+          <div class="article-date">
+            <span class="mat-caption">{{ article.date }}</span>
+            •
+            <span class="mat-caption">{{ article.duration }}</span>
+          </div>
+        </div>
+      </div>
+
+    </mat-card>
+  </ng-container>
+</ng-container>
