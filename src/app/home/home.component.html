@@ -1,8 +1,0 @@
-<ng-container *ngFor="let topic of topics$ | keyvalue">
-  <cpio-topic-section 
-    [topics]="topic.value | async" 
-    [topicName]="topic.key"
-    [title]="topicName[topic.key] ? topicName[topic.key] : topic.key | titlecase">
-  </cpio-topic-section>
-
-</ng-container>
