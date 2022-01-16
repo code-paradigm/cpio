@@ -1,0 +1,7 @@
+<span class="mat-display-1">
+  {{ topicName[title] || title | titlecase }}
+</span>
+
+<br><br>
+
+<cpio-topic class="cards-container" [topics]="topics | async"></cpio-topic>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CPIO</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ba4c051772.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="mat-typography ">
+  <cpio-root></cpio-root>
+  <script>
+    function scrollMeIn(h2Num) {
+      subheadings = document.querySelectorAll('h2');
+      subheadings[h2Num].scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+    }
+
+    function showLanguage(languageNum) {
+      buttons = document.querySelectorAll('.language-button');
+      buttons.forEach(function (button, i) {
+        if (i === languageNum) {
+          button.classList.add('highlighted-button');
+        } else {
+          button.classList.remove('highlighted-button');
+        }
+      });
+      solutions = document.querySelectorAll('.solution-language');
+      solutions.forEach(function (solution, i) {
+        if (i === languageNum) {
+          solution.style.display = 'block';
+        } else {
+          solution.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

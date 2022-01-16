@@ -1,0 +1,70 @@
+<div class="bottom-container" [ngClass]="data ? 'darkMode mat-app-background' : '' ">
+  <div class="page-title">
+    <!-- <span class="mat-title">CodeParadigm</span> -->
+    <button mat-button routerLink="/" (click)="openLink($event)">  
+      <span class="mat-title">codeparadigm</span>
+    </button>
+  </div>
+
+  <button mat-stroked-button color="primary" class="search-box">
+    <mat-icon>search</mat-icon>
+    Search
+  </button>
+
+  <div class="button-list">
+
+    <div class="icon-button" [routerLink]="['topic', 'angular']" (click)="openLink($event)">
+      <fa-icon class="angular" [icon]="faAngular"></fa-icon>
+      <span class="mat-caption">Angular</span>
+    </div>
+    <div class="icon-button">
+      <fa-icon class="react" [icon]="faReact"></fa-icon>
+      <span class="mat-caption">React</span>
+    </div>
+    <div class="icon-button" [routerLink]="['topic', 'javascript']" (click)="openLink($event)">
+      <fa-icon class="javascript" [icon]="faJs"></fa-icon>
+      <span class="mat-caption">JavaScript</span>
+    </div>
+    <div class="icon-button" [routerLink]="['topic', 'python']">
+      <fa-icon class="python" [icon]="faPython"></fa-icon>
+      <span class="mat-caption">Python</span>
+    </div>
+    <div class="icon-button" [routerLink]="['topic', 'dotnet']" (click)="openLink($event)">
+      <i class="far fa-dot-circle"></i>
+      <span class="mat-caption">DotNet</span>
+    </div>
+    <!-- <div class="icon-button">
+      <fa-icon class="rust" [icon]="faRust"></fa-icon>
+      <span class="mat-caption">Rust</span>
+    </div> -->
+    <div class="icon-button">
+      <fa-icon class="html" [icon]="faHtml5"></fa-icon>
+      <span class="mat-caption">HTML</span>
+    </div>
+    <div class="icon-button" [routerLink]="['topic', 'mft']" (click)="openLink($event)">
+      <i class="fas fa-file-import"></i>
+      <span class="mat-caption">MFT</span>
+    </div>
+    <div class="icon-button">
+      <fa-icon class="css" [icon]="faCss3"></fa-icon>
+      <span class="mat-caption">CSS</span>
+    </div>
+    
+  </div>
+
+  <div class="social-buttons">
+    <span class="">
+      <fa-icon [icon]="faLinkedin" class="social"></fa-icon>
+    </span>
+    <span>
+      <fa-icon [icon]="faGithub" class="social"></fa-icon>
+    </span>
+    <span class="">
+      <fa-icon [icon]="faYoutube" class="social"></fa-icon>
+    </span>
+    
+    
+    
+  </div>
+
+</div>

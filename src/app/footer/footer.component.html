@@ -1,0 +1,34 @@
+<div class="footer">
+
+  <mat-card class="consult">
+
+    <div *ngIf="!screen.mobile" class="consult-image">
+      <img src="../../assets/consult.jpg" alt="consult" width="330" height="100%">
+    </div>
+
+    <div class="consult-text">
+      <span class="mat-title">Have a new project or need consulting on an existing one.</span>
+      <br><br>
+      <span class="mat-body-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis a quo fuga maiores commodi est optio dolor reiciendis maxime officia?</span>
+      <br><br><br>
+      <button mat-raised-button (click)="openDialog()" color="primary">
+        Contact Us
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+    
+  </mat-card>
+
+  <div class="footer-bottom">
+    <span class="mat-body-1">
+      &copy; 2021 codingParadigm.io
+    </span>
+
+    <div>
+      <fa-icon [icon]="faLinkedin" class="social"></fa-icon>
+      <fa-icon [icon]="faGithub" class="social"></fa-icon>
+      <fa-icon [icon]="faYoutube" class="social"></fa-icon>
+    </div>
+  </div>
+
+</div>

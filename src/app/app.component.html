@@ -1,0 +1,68 @@
+<div [ngClass]="{'mat-typography': true, 'app-frame': true,
+  'darkMode': toggleDarkMode, 'root-container': true,
+  'mat-app-background': true}">
+
+  <div [ngClass]="{'mat-elevation-z2': true, 'dark-header': toggleDarkMode, 
+  'light-header': !toggleDarkMode}">
+    <div class="site-width display-flex header">
+
+      <div class="display-flex">
+
+        <!-- <ng-container *ngIf="!toggleDarkMode">
+          <img class="logo" routerLink="/" src="../assets/logo-light.jpg" height="50px" width="" />
+        </ng-container>
+
+        <ng-container *ngIf="toggleDarkMode">
+          <img class="logo" routerLink="/" src="../assets/logo-dark.jpg" height="50px" width="" />
+        </ng-container> -->
+
+        <button mat-button routerLink="/">  
+          <span class="mat-title">codeparadigm</span>
+        </button>
+
+        <div *ngIf="screen.tablet || screen.laptop">
+          
+          <button mat-button [routerLink]="['topic', 'angular']">
+            Angular
+          </button>
+
+          <button mat-button [routerLink]="['topic', 'javascript']">
+            JavaScript
+          </button>
+
+          <button mat-button [routerLink]="['topic', 'dotnet']">
+            DotNet
+          </button>
+
+          <button mat-button [routerLink]="['topic', 'mft']">
+            MFT
+          </button>
+
+        </div>
+      </div>
+
+      <span class="spacer"></span>
+
+      <div>
+        <a mat-button routerLink="/about">About</a>
+        <button mat-icon-button>
+          <mat-icon *ngIf="toggleDarkMode" (click)="toggleDarkMode = !toggleDarkMode">brightness_high</mat-icon>
+          <mat-icon *ngIf="!toggleDarkMode" (click)="toggleDarkMode = !toggleDarkMode">brightness_4</mat-icon>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="main-content site-width">
+    <router-outlet></router-outlet>
+    <cpio-footer [screen]="screen" [toggleDarkMode]="toggleDarkMode"></cpio-footer>
+  </div>
+
+  <div class="floating-button" *ngIf="screen.mobile">
+    <button mat-fab color="primary">
+      <mat-icon (click)="openBottomSheet()">widgets</mat-icon>
+    </button>
+  </div>
+
+</div>
